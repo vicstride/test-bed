@@ -1,17 +1,23 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './FadeEffect.css';
 
 const FadeEffect: React.FC = (props) => {
+  const [state, setState] = useState({ expanded: false });
+
+  const toggleCompact = () => { 
+    setState({ ...state, expanded: !state.expanded });
+  }
+
   return (
-    <div className="FadeEffect--container">
+    <section className={'FadeEffect--container' + `${state.expanded ? ' expanded' : ''}`}>
         { props.children }
-        <div className="FadeEffect--fade-container">
-            <section className='FadeEffect--fade'></section>
-            <section className='FadeEffect--expand'>
-                <a href="#">Read More</a>
+        <div className={'FadeEffect--fade-container' + `${state.expanded ? ' expanded' : ''}`}>
+            <section className={'FadeEffect--fade' + `${state.expanded ? ' expanded' : ''}`} role='presentation'></section>
+            <section className={'FadeEffect--button' + `${state.expanded ? ' expanded' : ''}`} role='button'>
+                <a onClick={toggleCompact}>{state.expanded ? 'Shrink me!' : 'Expand me!'}</a>
             </section>
         </div>
-    </div>
+    </section>
   );
 }
 
