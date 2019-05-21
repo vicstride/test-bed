@@ -1,0 +1,44 @@
+.FadeEffect--container {
+    text-align: left;
+    margin: 1rem;
+    padding: 1rem;
+    width: 50%;
+    border-radius: 0.2rem;
+
+    background-color: white;
+    overflow: hidden;
+    position: relative;
+
+    max-height: 15rem;
+}
+
+.FadeEffect--fade-container {
+    text-align: center; 
+
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    min-height: 6.5rem;
+    margin: 0;
+}
+
+.FadeEffect--fade {
+    position: relative;
+    display: inline-block;
+    flex-grow: 1;
+    min-height: 5rem;
+    background-image: linear-gradient(to bottom, rgba(255,255,255,0), rgba(255,255,255,100));
+}
+
+.FadeEffect--expand {
+    font-size: 1.2rem;
+
+    position: relative;
+    display: inline-block;
+    flex-grow: 0;
+    padding: 0 0 1rem 0;
+    background-color: rgba(255,255,255,100);
+}

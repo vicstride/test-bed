@@ -21,3 +21,11 @@ body {
   width: 100%;
   font-size: 10px;
 }
+
+div {
+  display: inline-block;
+}
+
+p {
+  margin: 0.8rem 0;
+}
