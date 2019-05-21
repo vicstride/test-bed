@@ -13,7 +13,7 @@ const FadeEffect: React.FC = (props) => {
         { props.children }
         <div className={'FadeEffect--fade-container' + `${state.expanded ? ' expanded' : ''}`}>
             <section className={'FadeEffect--fade' + `${state.expanded ? ' expanded' : ''}`} role='presentation'></section>
-            <section className={'FadeEffect--button' + `${state.expanded ? ' expanded' : ''}`} role='button'>
+            <section className='FadeEffect--button' role='button'>
                 <a onClick={toggleCompact}>{state.expanded ? 'Shrink me!' : 'Expand me!'}</a>
             </section>
         </div>
