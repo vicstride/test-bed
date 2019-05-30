@@ -50,10 +50,16 @@
 
 .FadeEffect--button {
     font-size: 1.2rem;
+    cursor: pointer;
 
     position: relative;
     display: inline-block;
     flex-grow: 0;
     padding: 0 0 1rem 0;
     background-color: rgba(255,255,255,100);
+    margin: 0 -1rem;
+}
+
+.FadeEffect--button.expanded {
+    margin: 0 -1rem -1rem;
 }

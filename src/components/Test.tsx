@@ -3,9 +3,10 @@ import './Test.css';
 
 const Test: React.FC = () => {
   return (
-    <div className="Test">
-      <p>Tests Pass</p>
-    </div>
+    <details>
+      <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+      <summary>Show/Hide me</summary>
+    </details>
   );
 }
 
